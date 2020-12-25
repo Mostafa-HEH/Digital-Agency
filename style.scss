@@ -1,0 +1,308 @@
+html{
+    margin: 0 100px 0 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.for_tap,.for_mob{
+    position: none;
+    display: none;
+}
+
+nav{
+    div{
+        ul{
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            li{
+                list-style: none;
+                margin: 17px 15px 0;
+                
+                &:nth-of-type(1){
+                    margin-right: auto;
+                    margin-top: 0 !important;
+                    align-self: start;
+                    img{
+                        position: static;
+                    }
+                }
+                &:nth-of-type(5){
+                    a{
+                    padding: 11px 30px;
+                    background-color: black;
+                    border-radius: 50px;
+                    transition: background-color 1s;
+                    &:hover{
+                        background-color: rgba(0, 0, 0, 0.52);
+                    }
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+
+                    &,&:active{
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .for_desktop{
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+
+
+main{
+    h1{
+        font-size: 5rem;
+        max-width: 400px;
+        margin-top: 120px;
+        margin-bottom: 41px;
+        letter-spacing: 4.5%;
+        font-weight: 900;
+        
+        span{
+            color: #FF0000;
+        }
+    }
+
+    h3{
+        font-size: 1.5rem;
+        color: rgba(0, 0, 0, 0.308);
+        font-weight: 300;
+        letter-spacing: 20%;
+        margin-top: 0;
+        margin-bottom: 27px;
+    }
+
+    h3+p{
+        color: rgba(0, 0, 0, 0.431);
+        max-width: 500px;
+        margin-top: 0;
+        margin-bottom: 41px;
+        line-height: 144%;
+    }
+    
+    p+a{
+        text-decoration: none;
+        background-color: #01013B;
+        color: white;
+        padding: 17px 28px;
+        border-radius: 50px;
+        box-shadow: 2px 6px 37px -13px rgba(0,0,0,0.83);
+        transition: background-color 1s;
+        &:hover{
+            background-color: #01013bb4;
+        }
+    }
+
+    .main_brands{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 160px;
+        margin-bottom: 63px;
+
+        li{
+            list-style: none;
+        }
+        img{
+            width: 100px;
+        }
+    }
+
+    ul+div{
+        text-align: center;
+      a{
+         text-decoration: none;
+          color: #3D42DF;
+          font-size: 20px;
+          font-weight: 400;
+        }
+        p{
+            color: black;
+            margin: auto;
+            font-size: 3.4rem;
+            font-weight: 900;
+            max-width: 600px;
+        }
+    }
+
+    .main_pis{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 60px;
+
+        li{
+            list-style: none;
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 900;
+            margin-top: 50px;
+
+            &:nth-of-type(2){
+                margin-top: 0!important;
+                padding: 50px 80px 0 80px;
+                box-shadow: 0px 2px 30px 0px rgba(50, 50, 50, 0.43);
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 849px){
+    html{
+        margin: 0 50px 0 50px;
+    }
+    .for_tap{
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100vw;
+    }
+
+    .for_desktop,.for_mob{
+        position: none;
+        display: none;
+    }
+
+    nav{
+        div{
+            ul{
+                li{
+                    margin: 17px 10px 0;
+                }
+            }
+        }
+
+    }
+
+    main{
+        h1{
+            margin-top: 100px;
+            margin-bottom: 10px;
+            color: white;
+        }
+        h3,h3+p{
+            color: rgba(255, 255, 255, 0.514) ;
+            margin-bottom: 10px;
+        }
+        h3+p{
+            margin-bottom: 50px;
+        }
+
+        .main_brands{
+            margin-top: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap
+        }
+    }
+}
+
+
+@media all and (max-width: 411px){
+    html{
+        margin: 0 20px 0 20px;
+    }
+    .for_mob{
+        width: 100vw;
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        
+    }
+
+    .for_desktop,.for_tap{
+        position: none;
+        display: none;
+    }
+
+    nav{
+        div{
+            ul{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 60px;
+                li{
+                    &:nth-of-type(1){
+                        display: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+    main{
+
+        h1{
+            font-size: 4.2rem;
+            margin-top: 30px;
+            // margin-bottom: 50px;
+        }
+
+        h3{
+            font-size: 1rem;
+        }
+
+        h3+p{
+            font-size: .9rem;
+        }
+
+        ul+div{
+            p{
+                font-size: 2.5rem;
+            }
+    
+        }
+
+
+        .main_pis{
+            // display: flex;
+            // flex-direction: column;
+            // align-content: stretch;
+            li{
+                margin: 15px 10px;
+                 
+                &:nth-of-type(2){
+                     margin-top: 0!important;
+                     padding: 10px 20px 0 20px;
+                     box-shadow: 0px 2px 30px 0px rgba(50, 50, 50, 0.43);
+                }
+                a{
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+
+        }
+
+        .main_brands{
+            margin-top: 300px;
+            align-items: center;
+            justify-content: center;
+            
+            li{
+                margin: 0 30px;
+            }
+
+        }
+    }
+}
